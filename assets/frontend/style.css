@@ -1,0 +1,43 @@
+.custom_options_group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+  
+  .custom_options_group h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-right: 15px;
+    line-height: 1.5; 
+  }
+  
+  .custom_options_group select {
+    padding: 8px 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #444;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease-in-out;
+    line-height: 1.5;
+  }
+  
+  .custom_options_group select:hover,
+  .custom_options_group select:focus {
+    border-color: #aaa;
+    outline: none;
+  }
+  
+  .custom_options_group select option {
+    background-color: #fff;
+    color: #444;
+  }

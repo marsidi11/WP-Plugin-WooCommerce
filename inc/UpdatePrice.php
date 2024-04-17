@@ -37,7 +37,7 @@ function cpo_update_price_script()
 
                             $(this).data('old-price', option_price);
 
-                            $('.total_price, .wc-block-components-product-price').text(currency_symbol + total_price.toFixed(2));
+                            $('.total_price, .woocommerce-Price-amount').text(currency_symbol + total_price.toFixed(2));
                         });
                     });
                 </script>

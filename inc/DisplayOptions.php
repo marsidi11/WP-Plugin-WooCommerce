@@ -12,17 +12,16 @@ function cpo_display_custom_options()
 
     if (!empty($custom_options)) 
     {
-        echo '<div class="custom_options_container">';
+        echo '<table class="custom_options_container">';
 
         foreach ($custom_options as $group_name => $options) 
         {
-            echo '<div class="custom_options_group">';
-            echo '<h4>' . esc_html($group_name) . '</h4>';
+			
+            echo '<tr class="custom_options_group">';
+            echo '<td><h4>' . esc_html($group_name) . '</h4></td>';
 
-            // Start the select element
-            echo '<select name="custom_options[' . esc_attr($group_name) . ']">';
+            echo '<td><select name="custom_options[' . esc_attr($group_name) . ']">';
 
-            // Add a default option
             echo '<option value="none">None</option>';
 
             foreach ($options as $option) 
@@ -31,14 +30,13 @@ function cpo_display_custom_options()
                 $option_name = $option_data[0];
                 $option_price = isset($option_data[1]) ? floatval($option_data[1]) : 0;
 
-                // Create an option element for each option
                 echo '<option value="' . esc_attr($option) . '" data-price="' . esc_attr($option_price) . '">' . esc_html($option_name) . ' (+' . wc_price($option_price) . ')</option>';
             }
 
-            echo '</select>';
-            echo '</div>';
+            echo '</td></select>';
+            echo '</tr>';
         }
-        echo '</div>';
+        echo '</table>';
         echo '<div class="custom_options_total">';
         echo '<span class="total_label">' . esc_html__('Total', 'cpo') . ':</span> <span class="total_price">' . wc_price($product->get_price()) . '</span>';
         echo '</div>';

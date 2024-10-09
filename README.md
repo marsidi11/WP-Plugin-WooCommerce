@@ -1,4 +1,4 @@
 # WP-Plugin-WooCommerce-Addon
-A small project for a job task to display some addons on WooCommerce products.
+A small project to display some addons on WooCommerce products.
 
 Add custom options for the product in product details in WooCommerce
